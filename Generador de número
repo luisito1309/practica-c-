@@ -1,0 +1,30 @@
+/*
+Titulo: Generacion de numeros aleatorios. 
+Autor: Luis Rodrigo Aguilar Justiniano
+Descripcion: Realizar un programa que imprina "X" numeros aleatorios entre 0 - 99, donde "X" sea ingresado por el usuario. 
+Fecha:2024 - 01 - 17
+*/
+#include <iostream>
+#include <cstdlib> // Para la función rand
+#include <ctime>   // Para inicializar la semilla de los números aleatorios
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	
+	// Inicializar la semilla de los números aleatorios con la hora actual
+	std::srand(std::time(0));
+	
+	// Solicitar al usuario la cantidad de números aleatorios que desea
+	std::cout << "Ingrese la cantidad de numeros aleatorios que desea generar: ";
+	int n;
+	std::cin >> n;
+	
+	// Imprimir los n números aleatorios entre 0 y 99
+	std::cout << "Números aleatorios entre 0 y 99:\n";
+	for (int i = 0; i < n; ++i) {
+	int numeroAleatorio = std::rand() % 100; // Generar un número aleatorio entre 0 y 99
+	std::cout << numeroAleatorio << std::endl;
+	}
+	
+	return 0;
+}
