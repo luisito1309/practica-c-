@@ -1,0 +1,33 @@
+#include <iostream>
+#include <random>
+#include <limits>
+using namespace std;
+
+int main()
+{
+	int N;
+	cout <<"ingrese la cantidad de numeros aleatorios a generar:";
+	cin>>N;
+	//generar una funcion para crear numeros aleatorios
+	random_device rd;
+	mt19937 gen(rd());
+	uniform_int_distribution<>distrib(0,99);
+	
+	int numeroAleatorio, maximo = numeric_limits<int>::minimo=numeric_limits<int>maximo();
+	
+	cout<<" numeros aleatorio generado:"<<endl;
+	for(int i = 0 ; 1 < N; i++){
+		numeroAleatorio = distrib(gen);
+		cout << numeroAleatorio <<"";
+		
+		if(numeroAleatorio > maximo){
+		   maximo =numeroAleatorio;
+		}
+		if(numeroAleatorio < minimo){
+		   minimo=numeroAleatorio;
+		};
+	}
+	
+	cout<<"\nEl numero mas grande generado es:"<<maximo<<endl;
+	cout<<"\nEl numero mas pequeño generado es:"<<minimo<<endl;
+	return 0;
