@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int n1, n2; // Variables globales
+
+// Declarar funciones
+int sumar(int num1, int num2)
+{
+	int suma;
+	suma = num1 + num2;
+	return suma;
+}
+
+void sumarNumeros()
+{
+	cout << "Ingrese el primer numero: ";
+	cin >> n1;
+	cout << "Ingrese el segundo numero: ";
+	cin >> n2;
+}
